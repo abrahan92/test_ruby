@@ -3,7 +3,7 @@ require_relative '../order_report'
 
 describe 'Order API', type: :request do
 
-  response = process_data(true)
+  response = OrderReportModule.process_data(true)
 
   it 'response correct structure' do
     expect(response.keys).to contain_exactly(:data, :status_code)

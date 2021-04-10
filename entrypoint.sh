@@ -1,4 +1,4 @@
 #!/bin/bash
 
 echo "\n Loading..."
-ruby order_report.rb $PAGE
+ruby -r './order_report.rb' -e "OrderReportModule.data_report" $PAGE
