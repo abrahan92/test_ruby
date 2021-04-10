@@ -24,7 +24,7 @@ describe 'Order API', type: :request do
     end
 
     it 'should not be nil' do
-      expect(response[:data][:orders_count]).not_to be(NIL)
+      expect(response[:data][:orders_count]).not_to be_nil
     end
   end
 
