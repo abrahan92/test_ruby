@@ -1,4 +1,4 @@
-# Instructions for Returnly Code Challenge
+# Instructions for Returnly Take Home Exercise
 
 ## Abrahan Mendoza
 
