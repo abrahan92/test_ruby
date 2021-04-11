@@ -81,9 +81,9 @@ A private method called `get_response_status` handle the response status, with r
 ### Gems used 💎
 
 * `net/http` To make the http requests in the order_interface.rb.
-* `colorize` To user happy colors on CLI for the reporting.
+* `colorize` To use happy colors on CLI for the report.
 * `json` To parse the data requested on the endpoint.
-* `date` To parse the string date and be able to process and calculte the interval of times.
+* `date` To parse the string date, be able to process and calculte the interval of times.
 * `uri` To parse the endpoint url used on the `get_data` method.
 * `rspec` To build the test for our scenarios.
 * `rake` To run the rspec task.
