@@ -3,8 +3,8 @@
 echo "\n\e[33mInstalling required gems..."
 bundle install
 
-# echo "\n\e[32mRunning rspec tests..."
-# bundle exec rake spec
+echo "\n\e[32mRunning rspec tests..."
+bundle exec rake spec
 
 echo "\e[36m
 ####################################################################################################
