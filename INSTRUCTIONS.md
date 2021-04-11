@@ -55,14 +55,14 @@ I tried to keep in mind all things to do a real case for this simple example, bu
 
 The project structure have the follow topics:
 
-* Ruby files that have the logic to solve the problem (order_report.rb && order_interface.rb).
-* Gemfile with the gems needed for the problem and spec tests.
-* Dockerfile with the image needed to run the project if don't have ruby installed or your version break with this project.
-* Rakefile to run the spec tasks.
-* installations.sh is the bash script that check if you have ruby or docker and then decide to run
-* entrypoint.sh is the bash script used for the docker image to run the ruby script on the created container.
-* The specs tests are in the spec folder, we have 10 examples which check the structures used in this project.
-* README.md have the test rules and instructions.
+* Ruby files that have the logic to solve the problem `(order_report.rb && order_interface.rb)`.
+* `Gemfile` with the gems needed for the problem and spec tests.
+* `Dockerfile` with the image needed to run the project if don't have ruby installed or your version break with this project.
+* `Rakefile` to run the spec tasks.
+* `installations.sh` is the bash script that check if you have ruby or docker and then decide to run
+* `entrypoint.sh` is the bash script used for the docker image to run the ruby script on the created container.
+* The specs tests are in the `spec folder`, we have 10 examples which check the structures used in this project.
+* `README.md` have the test rules and instructions.
 
 ### Notes 🚩️
 
