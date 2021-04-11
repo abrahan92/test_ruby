@@ -23,7 +23,7 @@ The purpose of this document is to describe how to run the Ruby script approach 
 
 3. Run ```sudo chmod -R 777 installations.sh``` in order to add permission for run the bash script.
 
-4. Run ```bundle install``` To install the gems on the Gemfile.
+4. Run ```bundle install``` (Optional) Just in case you would like to run the script manually using ruby to install the required gems.
 
 5. Run ```./installations.sh``` to run the bash script.
 
