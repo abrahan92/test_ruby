@@ -49,6 +49,8 @@ The Rspec tests will run while image building
 
   * Run ```bundle exec rake spec``` -> For this test we have 10 example scenarios
 
+For the above command you need to have ruby installed on your local machine.
+
 It is possible your bundler could be deprecated if you already have a ruby version then update it before run the 
 spec task. `bundle update --bundler`
 
@@ -57,6 +59,8 @@ spec task. `bundle update --bundler`
   * Run ```bundle install``` -> To install the gems on the Gemfile
 
   * Run ```ruby -r './order_report.rb' -e "OrderReportModule.data_report"``` -> Keep in mind you must have ruby installed
+
+For the above command you need to have ruby installed on your local machine.
 
 ### Description 📋
 
