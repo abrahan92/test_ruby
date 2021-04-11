@@ -9,7 +9,7 @@ module OrderReportModule
   # (Returns): [response_data:Object]
   def self.process_data(testing_mode = false)
     if ARGV[0].nil?
-      print "Enter the page number would you like to get / or leave blank to get default page: ".green
+      print "Enter the page number you would like to get / or leave blank to get default page: ".green
       page_number = STDIN.gets.chomp
     elsif testing_mode
       page_number = "1"
@@ -17,7 +17,7 @@ module OrderReportModule
       page_number = ARGV[0]
     end
 
-    print "Would you like to use a mock? [y/n]: ".green
+    print "Would you like to use a mock? Leave blank for not [y/n]: ".green
     mock = STDIN.gets.chomp
 
     if mock == 'y' || mock == 'Y'

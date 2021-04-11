@@ -1,9 +1,10 @@
 #!/bin/bash
 
-echo "\n\e[33mInstalling gems required..."
+echo "\n\e[33mInstalling required gems..."
 bundle install
 
 echo "\n\e[32mRunning rspec tests..."
+bundle update
 bundle exec rake spec
 
 echo "\e[36m
