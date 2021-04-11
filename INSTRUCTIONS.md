@@ -23,7 +23,9 @@ The purpose of this document is to describe how to run the Ruby script approach 
 
 3. Run ```sudo chmod -R 777 installations.sh``` in order to add permission for run the bash script.
 
-4. Run ```./installations.sh``` to run the bash script.
+4. Run ```bundle install``` To install the gems on the Gemfile.
+
+5. Run ```./installations.sh``` to run the bash script.
 
 Above script will detect if user already have installed ruby on your local machine, if yes then run the ruby script, 
 if not will ask if have docker installed to run a docker container with a ruby image configured to this test. 
@@ -44,7 +46,11 @@ The Rspec tests will run while image building
 
   * Run ```bundle exec rake spec``` -> For this test we have 10 example scenarios
 
+  It is possible your bundler could be deprecated then update before run the task.
+
 #### Run the script with ruby manually 💥
+
+  * Run ```bundle install``` -> To install the gems on the Gemfile
 
   * Run ```ruby -r './order_report.rb' -e "OrderReportModule.data_report"``` -> Keep in mind you must have ruby installed
 
