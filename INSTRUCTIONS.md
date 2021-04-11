@@ -17,9 +17,13 @@ The purpose of this document is to describe how to run the Ruby script approach 
 
 #### Steps 🌀
 
-1. Run ```sudo chmod -R 777 installations.sh``` in order to add permission for run the bash script.
+1. Run ```git clone https://github.com/abrahan92/test_ruby.git``` to get the project locally.
 
-2. Run ```./installations.sh``` to run the bash script.
+2. Run ```cd test_ruby``` to go on the project root.
+
+3. Run ```sudo chmod -R 777 installations.sh``` in order to add permission for run the bash script.
+
+4. Run ```./installations.sh``` to run the bash script.
 
 Above script will detect if user already have installed ruby on your local machine, if yes then run the ruby script, 
 if not will ask if have docker installed to run a docker container with a ruby image configured to this test. 
