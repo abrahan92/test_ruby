@@ -37,6 +37,13 @@ In case you don´t have ruby and docker installed, will be more easy install Doc
 
 For installation check this topic https://docs.docker.com/get-docker/
 
+#### Mock DATA 🎏
+
+The project has a `mock.json` file that you can use to try example data with more orders and purchases.
+
+This feature just can be tried running the script manually with ruby, because the CLI will ask you what would you 
+like to use, `Mock file or Request the API`.
+
 #### Run script with docker 🚀
 
   * Run ```./installations.sh```
@@ -70,6 +77,7 @@ I tried to keep in mind all things to do a real case for this simple example, bu
 The project structure have the follow topics:
 
 * Ruby files that have the logic to solve the problem `(order_report.rb && order_interface.rb)`.
+* `mock.json` file have example data with more orders and purchases made by users.
 * `Gemfile` with the gems needed for the problem and spec tests.
 * `Dockerfile` with the image needed to run the project if don't have ruby installed or your version break with this project.
 * `Rakefile` to run the spec tasks.
