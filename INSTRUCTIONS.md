@@ -49,7 +49,8 @@ The Rspec tests will run while image building
 
   * Run ```bundle exec rake spec``` -> For this test we have 10 example scenarios
 
-  It is possible your bundler could be deprecated then update before run the task.
+It is possible your bundler could be deprecated if you already have a ruby version then update it before run the 
+spec task. `bundle update --bundler`
 
 #### Run the script with ruby manually 💥
 
