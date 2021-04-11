@@ -2,9 +2,8 @@
 require './order_interface.rb'
 
 module OrderReportModule
-  # Function for instance the order interface, get the data from the API
-  # and then process the information to generate the response data
-  # used for print the report, requesting the page number to the user on the prompt cli
+  # Function to ask user if would like use mock or request API data used
+  # for print the report, requesting the page number to the user on the prompt cli
   # (Params): []
   # (Returns): [response_data:Object]
   def self.process_data(testing_mode = false)
@@ -18,21 +17,17 @@ module OrderReportModule
     end
     
     if ARGV[0].nil?
-      print "Would you like to use a mock? Leave blank for not [y/n]: ".green
+      print "Would you like to use a mock? or leave blank for not [y/n]: ".green
       mock = STDIN.gets.chomp
 
       if mock == 'y' || mock == 'Y'
-        data          = JSON.parse(File.read("./mock.json"))
-        orders        = data['orders']
+        data   = JSON.parse(File.read("./mock.json"))
+        orders = data['orders']
       elsif mock.empty? || mock != 'y' || mock != 'Y'
-        connection    = OrderInterface.new("https://shopifake.returnly.repl.co", "orders.json", "page=#{page_number.scan(/\d/).join('').to_i}", page_number)
-        data          = connection.get_data
-        orders        = data[:res]['orders']
+        orders = request_orders_api_data(page_number)
       end
     else
-      connection    = OrderInterface.new("https://shopifake.returnly.repl.co", "orders.json", "page=#{page_number.scan(/\d/).join('').to_i}", page_number)
-      data          = connection.get_data
-      orders        = data[:res]['orders']
+      orders = request_orders_api_data(page_number)
     end
 
     response      = {
@@ -45,6 +40,15 @@ module OrderReportModule
         page_number: page_number
       }, status_code: 200
     }
+  end
+
+  # Function to get orders data from API
+  # (Params): [page_number:String]
+  # (Returns): [orders:Object]
+  def self.request_orders_api_data(page_number)
+    connection    = OrderInterface.new("https://shopifake.returnly.repl.co", "orders.json", "page=#{page_number.scan(/\d/).join('').to_i}", page_number)
+    data          = connection.get_data
+    orders        = data[:res]['orders']
   end
 
   # Function to show the report on CLI
