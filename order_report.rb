@@ -9,7 +9,7 @@ module OrderReportModule
   # (Returns): [response_data:Object]
   def self.process_data(testing_mode = false)
     if ARGV[0].nil?
-      print "Enter the page number would you like to get / or leave blank to get default page: ".yellow
+      print "Enter the page number would you like to get / or leave blank to get default page: ".green
       page_number = STDIN.gets.chomp
     elsif testing_mode
       page_number = "1"

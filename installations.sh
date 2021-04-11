@@ -19,19 +19,32 @@ run_with_docker () {
     docker run --env PAGE=$page_number -i returnly_abrahan_image
 }
 
+returnly_title () {
+    printf "\e[36m
+####################################################################################################
+####################### / __ \/ ____/_  __/ / / / __ \/ | / / /\ \/ / ##############################
+###################### / /_/ / __/   / / / / / / /_/ /  |/ / /  \  / ###############################
+##################### / _, _/ /___  / / / /_/ / _, _/ /|  / /___/ / ################################
+#################### /_/ |_/_____/ /_/  \____/_/ |_/_/ |_/_____/_/ #################################
+#################################################################################################### \n\n"
+}
+
 if check_command_exists "ruby -v" && check_command_exists "docker -v"
 then
     # 1. Check if ruby and docker are installed on your os
-    read -p 'You have installed Docker and Ruby, which one would you like to use? [ruby/docker]:' software
-
+    printf "\n\e[33m"
+    read -p 'You have installed Docker and Ruby, which one would you like to use? [ruby/docker]: ' software
+    printf "\n"
     if [[ ($software == "ruby" || $software == "Ruby") ]]
     then
+        returnly_title
         ruby -r './order_report.rb' -e "OrderReportModule.data_report"
     else
         run_with_docker
     fi
 elif check_command_exists "ruby -v"
 then
+    returnly_title
     ruby -r './order_report.rb' -e "OrderReportModule.data_report"
 else
     # 2. Check if docker has been installed in your os
