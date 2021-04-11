@@ -9,6 +9,7 @@ if check_command_exists "ruby -v"
 then
     ruby -r './order_report.rb' -e "OrderReportModule.data_report"
 else
+    # 2. Check if docker has been installed in your os
     if check_command_exists "docker -v"
     then
         read -p 'Enter the page number would you like to get / or leave blank to get default page: ' page_number
