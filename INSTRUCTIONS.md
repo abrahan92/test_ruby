@@ -27,6 +27,9 @@ The purpose of this document is to describe how to run the Ruby script approach 
 
 5. Run ```./installations.sh``` to run the bash script.
 
+It is possible your bundler could be deprecated if you already have a ruby version then update it before run the 
+spec task. `bundle update --bundler`
+
 Above script will detect if user already have installed ruby on your local machine, if yes then run the ruby script, 
 if not will ask if have docker installed to run a docker container with a ruby image configured to this test. 
 
