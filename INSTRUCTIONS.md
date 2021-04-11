@@ -32,9 +32,9 @@ The purpose of this document is to describe how to run the Ruby script approach 
 
   * Run ```./installations.sh```
 
-  After have docker installed, the above script will build the needed image for run the ruby script and will magic.
+  `After have docker installed, the above script will build the needed image for run the ruby script and will magic.
 
-  The Rspec tests will run while image building
+  The Rspec tests will run while image building`
 
 #### Run Rspec Tests manually 🔥
 
