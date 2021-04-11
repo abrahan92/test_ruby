@@ -6,7 +6,7 @@ check_command_exists () {
 
 run_with_docker () {
     printf "\n\e[33m"
-    read -p "Enter the page number would you like to get / or leave blank to get default page: " page_number
+    read -p "Enter the page number you would like to get / or leave blank to get default page: " page_number
 
     if [[ $page_number == "" ]]
     then
