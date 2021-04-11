@@ -14,8 +14,4 @@ WORKDIR /workdir
 # Copy all files
 COPY . /workdir/
 
-RUN /bin/bash -l -c "bundle install"
-
-RUN /bin/bash -l -c "bundle exec rake spec"
-
 ENTRYPOINT ["sh", "./entrypoint.sh"]
