@@ -30,7 +30,7 @@ For installation check this topic https://docs.docker.com/get-docker/
 
 #### Run script with docker 🚀
 
-  1. Run ```./installations.sh```
+  * Run ```./installations.sh```
 
 After have docker installed, the above script will build the needed image for run the ruby script and will magic.
 
@@ -38,11 +38,11 @@ The Rspec tests will run while image building
 
 #### Run Rspec Tests manually 🔥
 
-  1. Run ```bundle exec rake spec``` -> For this test we have 10 example scenarios
+  * Run ```bundle exec rake spec``` -> For this test we have 10 example scenarios
 
 #### Run the script with ruby manually 💥
 
-  1. Run ```ruby -r './order_report.rb' -e "OrderReportModule.data_report"``` -> Keep in mind you must have ruby installed
+  * Run ```ruby -r './order_report.rb' -e "OrderReportModule.data_report"``` -> Keep in mind you must have ruby installed
 
 ### Description 📋
 
