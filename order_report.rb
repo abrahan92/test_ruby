@@ -16,14 +16,20 @@ module OrderReportModule
     else
       page_number = ARGV[0]
     end
+    
+    if ARGV[0].nil?
+      print "Would you like to use a mock? Leave blank for not [y/n]: ".green
+      mock = STDIN.gets.chomp
 
-    print "Would you like to use a mock? Leave blank for not [y/n]: ".green
-    mock = STDIN.gets.chomp
-
-    if mock == 'y' || mock == 'Y'
-      data          = JSON.parse(File.read("./mock.json"))
-      orders        = data['orders']
-    elsif mock.empty? || mock != 'y' || mock != 'Y'
+      if mock == 'y' || mock == 'Y'
+        data          = JSON.parse(File.read("./mock.json"))
+        orders        = data['orders']
+      elsif mock.empty? || mock != 'y' || mock != 'Y'
+        connection    = OrderInterface.new("https://shopifake.returnly.repl.co", "orders.json", "page=#{page_number.scan(/\d/).join('').to_i}", page_number)
+        data          = connection.get_data
+        orders        = data[:res]['orders']
+      end
+    else
       connection    = OrderInterface.new("https://shopifake.returnly.repl.co", "orders.json", "page=#{page_number.scan(/\d/).join('').to_i}", page_number)
       data          = connection.get_data
       orders        = data[:res]['orders']
