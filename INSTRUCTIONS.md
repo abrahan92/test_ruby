@@ -30,7 +30,7 @@ The purpose of this document is to describe how to run the Ruby script approach 
 It is possible your bundler could be deprecated if you already have a ruby version then update it before run the 
 spec task. `bundle update --bundler`
 
-Above script will detect if user already have installed ruby on your local machine, if yes then run the ruby script, 
+`Step 5` script will detect if user already have installed ruby on your local machine, if yes then run the ruby script, 
 if not will ask if have docker installed to run a docker container with a ruby image configured to this test. 
 
 In case you don´t have ruby and docker installed, will be more easy install Docker and then run this script again
