@@ -21,28 +21,28 @@ The purpose of this document is to describe how to run the Ruby script approach 
 
 2. Run ```./installations.sh``` to run the bash script.
 
-  Above script will detect if user already have installed ruby on your local machine, if yes then run the ruby script, 
-  if not will ask if have docker installed to run a docker container with a ruby image configured to this test. 
+Above script will detect if user already have installed ruby on your local machine, if yes then run the ruby script, 
+if not will ask if have docker installed to run a docker container with a ruby image configured to this test. 
 
-  In case you don´t have ruby and docker installed, will be more easy install Docker and then run this script again
+In case you don´t have ruby and docker installed, will be more easy install Docker and then run this script again
 
-  For installation check this topic https://docs.docker.com/get-docker/
+For installation check this topic https://docs.docker.com/get-docker/
 
 #### Run script with docker 🚀
 
-  * Run ```./installations.sh```
+  1. Run ```./installations.sh```
 
-  `After have docker installed, the above script will build the needed image for run the ruby script and will magic.
+After have docker installed, the above script will build the needed image for run the ruby script and will magic.
 
-  The Rspec tests will run while image building`
+The Rspec tests will run while image building
 
 #### Run Rspec Tests manually 🔥
 
-```bundle exec rake spec``` -> For this test we have 10 example scenarios
+  1. Run ```bundle exec rake spec``` -> For this test we have 10 example scenarios
 
 #### Run the script with ruby manually 💥
 
-```ruby -r './order_report.rb' -e "OrderReportModule.data_report"``` -> Keep in mind you must have ruby installed
+  1. Run ```ruby -r './order_report.rb' -e "OrderReportModule.data_report"``` -> Keep in mind you must have ruby installed
 
 ### Description 📋
 
