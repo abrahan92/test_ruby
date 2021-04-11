@@ -7,7 +7,7 @@ check_command_exists () {
 # 1. Check if ruby has been installed in your os
 if check_command_exists "ruby -v"
 then
-    ruby order_report.rb
+    ruby -r './order_report.rb' -e "OrderReportModule.data_report"
 else
     if check_command_exists "docker -v"
     then
