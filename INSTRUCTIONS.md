@@ -66,11 +66,10 @@ The project structure have the follow topics:
 
 ### Notes 🚩️
 
-I have created an order interface to separete the logic request the orders API and simulate we do the request to send,
-the info to other microservices. There are the needed gems to work correctly.
+I have created an order interface to separete the orders API http request logic respect to the order module for simulate we send information to other microservices.
 
 Have the instance method called `get_data` to make the request to the endpoint for this test. Simulating that interface work on a real
-scenario, right now just have `GET` but we can have other http methods there if needed `[POST, PUT, DELETE, PATCH]`.
+scenario, right now just have `GET` but we could have others http methods if needed `[POST, PUT, DELETE, PATCH]`.
 
 There are some validations to rescue the script if some went wrong.
 
